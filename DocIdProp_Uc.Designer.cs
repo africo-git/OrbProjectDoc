@@ -29,8 +29,16 @@ namespace OrbProjectDoc
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // DocIdProp_Uc
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "DocIdProp_Uc";
+            this.Size = new System.Drawing.Size(575, 643);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
