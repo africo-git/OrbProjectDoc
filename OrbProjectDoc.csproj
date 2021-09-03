@@ -123,6 +123,7 @@
     <Compile Include="DocIdProp_Uc_Wpf.xaml.cs">
       <DependentUpon>DocIdProp_Uc_Wpf.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OrbHwDocTool.cs" />
     <Compile Include="RibbonTemplate.cs">
       <SubType>Component</SubType>
     </Compile>
