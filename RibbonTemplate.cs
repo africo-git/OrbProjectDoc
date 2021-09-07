@@ -19,31 +19,34 @@ namespace OrbProjectDoc
 
         private void TglBtoDocIdProp_Click(object sender, RibbonControlEventArgs e)
         {
-            //// Obtenemos el índice del control del ActionsPane que queremos mostrar.
-            //int myDocIdProp_Uc_index = Globals.ThisDocument.ActionsPane.Controls.GetChildIndex(Globals.ThisDocument.myDocIdProp_Uc);
+            // Obtenemos el índice del control del ActionsPane que queremos mostrar.
+            int myDocIdProp_Uc_index = Globals.ThisDocument.ActionsPane.Controls.GetChildIndex(Globals.ThisDocument.myDocIdProp_Uc);
 
-            //if (TglBtoDocIdProp.Checked)
-            //{
-            //    // Mostramos el control desesado del ActionsPane (cargado al inicio del documento)
-            //    Globals.ThisDocument.ActionsPane.Controls[myDocIdProp_Uc_index].Visible = true;
+            if (TglBtoDocIdProp.Checked)
+            {
+                // Mostramos el control desesado del ActionsPane (cargado al inicio del documento)
+                Globals.ThisDocument.ActionsPane.Controls[myDocIdProp_Uc_index].Visible = true;
 
-            //    // Mostramos el Document Actions Task Pane
-            //    Globals.ThisDocument.Application.TaskPanes[Word.WdTaskPanes.wdTaskPaneDocumentActions].Visible = true;
+                // Actualizamos los campos del ActionsPane mostrado
+                Globals.ThisDocument.myDocIdProp_Uc.UpdateFrom();
 
-            //    // Gestionamos la visibilidd de los controles del Ribbon que no sean compatibles
-            //    TglBtoCtrlVer.Enabled = false;
-            //}
-            //else
-            //{
-            //    // Ocultamos el control desesado del ActionsPane (cargado al inicio del documento)
-            //    Globals.ThisDocument.ActionsPane.Controls[myDocIdProp_Uc_index].Visible = false;
+                // Mostramos el Document Actions Task Pane
+                Globals.ThisDocument.Application.TaskPanes[Word.WdTaskPanes.wdTaskPaneDocumentActions].Visible = true;
 
-            //    // Ocultamos el Document Actions Task Pane
-            //    Globals.ThisDocument.Application.TaskPanes[Word.WdTaskPanes.wdTaskPaneDocumentActions].Visible = false;
+                // Gestionamos la visibilidd de los controles del Ribbon que no sean compatibles
+                TglBtoCtrlVer.Enabled = false;
+            }
+            else
+            {
+                // Ocultamos el control desesado del ActionsPane (cargado al inicio del documento)
+                Globals.ThisDocument.ActionsPane.Controls[myDocIdProp_Uc_index].Visible = false;
 
-            //    // Gestionamos la visibilidd de los controles del Ribbon que no sean compatibles
-            //    TglBtoCtrlVer.Enabled = true;
-            //}
+                // Ocultamos el Document Actions Task Pane
+                Globals.ThisDocument.Application.TaskPanes[Word.WdTaskPanes.wdTaskPaneDocumentActions].Visible = false;
+
+                // Gestionamos la visibilidd de los controles del Ribbon que no sean compatibles
+                TglBtoCtrlVer.Enabled = true;
+            }
         }
 
         private void TglBtoCtrlVer_Click(object sender, RibbonControlEventArgs e)
