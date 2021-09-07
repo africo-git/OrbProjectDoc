@@ -10,19 +10,22 @@
     <UserControl.Resources>
         <Color x:Key="NavyBlue">#FF000080</Color>
     </UserControl.Resources>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition x:Name="rowTittle" Height="Auto"/>
             <RowDefinition x:Name="rowOrbDocCode" Height="40"/>
             <RowDefinition x:Name="rowOrbDocTittle" Height="70"/>
             <RowDefinition x:Name="rowOrbDocShortTittle" Height="40"/>
-            <RowDefinition x:Name="rowOrbDocClass" Height="40"/>
-            <RowDefinition x:Name="rowOrbDocSubclass" Height="40"/>
+            <RowDefinition x:Name="rowOrbDocProgram" Height="40"/>
+            <RowDefinition x:Name="rowOrbDocProject" Height="40"/>
+            <RowDefinition x:Name="rowOrbDocContract" Height="40"/>
+            <RowDefinition x:Name="rowOrbDocContractTittle" Height="40"/>
+            <RowDefinition x:Name="rowOrbDocDrlNum" Height="40"/>
             <RowDefinition Height="70.4"/>
             <RowDefinition Height="184.8"/>
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="250"/>
@@ -49,23 +52,46 @@
         </Label>
         <TextBox x:Name="txtOrbDocShortTittle" Grid.Column="1" Height="23" Margin="3.2,13.6,0,0" Grid.Row="3" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="247" HorizontalAlignment="Left"/>
 
-        <Label x:Name="lblOrbDocProgram" Content="Program:" HorizontalAlignment="Right" Margin="0,9.8,250.2,0" Grid.Row="4" VerticalAlignment="Top" Height="26" Width="98" HorizontalContentAlignment="Right" Grid.ColumnSpan="2" Background="Transparent">
+        <Label x:Name="lblOrbDocContract" Content="Contract:" HorizontalAlignment="Right" Margin="0,10,250.2,0" Grid.Row="4" VerticalAlignment="Top" Height="26" Width="117" HorizontalContentAlignment="Right" Grid.ColumnSpan="2">
             <Label.Foreground>
                 <SolidColorBrush Color="{DynamicResource NavyBlue}"/>
             </Label.Foreground>
         </Label>
-        <TextBox x:Name="txtOrbDocProgram" Grid.Column="1" Height="23" Margin="3.2,13.8,0,0" Grid.Row="4" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="247" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txtOrbDocContract" Grid.Column="1" Height="23" Margin="3.2,14,0,0" Grid.Row="5" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="247" RenderTransformOrigin="0.463,2.745"/>
 
-        <Label x:Name="lblOrbDocProject" Content="Project:" HorizontalAlignment="Right" Margin="0,10,250.2,0" Grid.Row="5" VerticalAlignment="Top" Height="26" Width="117" HorizontalContentAlignment="Right" Grid.ColumnSpan="2">
+        <Label x:Name="lblOrbDocContractTittle" Content="Contract Tittle:" HorizontalAlignment="Right" Margin="0,10,250.2,0" Grid.Row="5" VerticalAlignment="Top" Height="26" Width="117" HorizontalContentAlignment="Right" Grid.ColumnSpan="2">
             <Label.Foreground>
                 <SolidColorBrush Color="{DynamicResource NavyBlue}"/>
             </Label.Foreground>
         </Label>
-        <TextBox x:Name="txtOrbDocProject" Grid.Column="1" Height="23" Margin="3.2,14,0,0" Grid.Row="5" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="247" RenderTransformOrigin="0.463,2.745"/>
+        <TextBox x:Name="txtOrbDocContractTittle" Grid.Column="1" Height="23" Margin="3.2,14,0,0" Grid.Row="4" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="247" RenderTransformOrigin="0.463,2.745"/>
 
-        <Button x:Name="CmdUpdateFormFields" Content="Update" HorizontalAlignment="Left" Margin="22,3.2,0,0" Grid.Row="7" Width="75" Height="19" VerticalAlignment="Top"/>
 
-        <Button x:Name="CmdSaveCustomDocProperties" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="152.2,3.2,0,0" Grid.Row="7" VerticalAlignment="Top" Width="75" Height="19"/>
+
+        <Label x:Name="lblOrbDocProgram" Content="Program:" HorizontalAlignment="Right" Margin="0,9.8,250.2,0" Grid.Row="6" VerticalAlignment="Top" Height="26" Width="98" HorizontalContentAlignment="Right" Grid.ColumnSpan="2" Background="Transparent">
+            <Label.Foreground>
+                <SolidColorBrush Color="{DynamicResource NavyBlue}"/>
+            </Label.Foreground>
+        </Label>
+        <TextBox x:Name="txtOrbDocProgram" Grid.Column="1" Height="23" Margin="3.2,13.8,0,0" Grid.Row="6" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="247" HorizontalAlignment="Left"/>
+
+        <Label x:Name="lblOrbDocProject" Content="Project:" HorizontalAlignment="Right" Margin="0,10,250.2,0" Grid.Row="7" VerticalAlignment="Top" Height="26" Width="117" HorizontalContentAlignment="Right" Grid.ColumnSpan="2">
+            <Label.Foreground>
+                <SolidColorBrush Color="{DynamicResource NavyBlue}"/>
+            </Label.Foreground>
+        </Label>
+        <TextBox x:Name="txtOrbDocProject" Grid.Column="1" Height="23" Margin="3.2,14,0,0" Grid.Row="7" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="247" RenderTransformOrigin="0.463,2.745"/>
+
+        <Label x:Name="lblOrbDocDrlNum" Content="DRL ID:" HorizontalAlignment="Right" Margin="0,10,250.2,0" Grid.Row="8" VerticalAlignment="Top" Height="26" Width="117" HorizontalContentAlignment="Right" Grid.ColumnSpan="2">
+            <Label.Foreground>
+                <SolidColorBrush Color="{DynamicResource NavyBlue}"/>
+            </Label.Foreground>
+        </Label>
+        <TextBox x:Name="txtOrbDocDrlNum" Grid.Column="1" Height="23" Margin="3.2,14,0,0" Grid.Row="8" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="247" RenderTransformOrigin="0.463,2.745"/>
+
+        <Button x:Name="CmdUpdateFormFields" Content="Update" HorizontalAlignment="Left" Margin="22,3.2,0,0" Grid.Row="10" Width="75" Height="19" VerticalAlignment="Top" Click="CmdUpdateFormFields_Click"/>
+
+        <Button x:Name="CmdSaveCustomDocProperties" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="152.2,3.2,0,0" Grid.Row="10" VerticalAlignment="Top" Width="75" Height="19"/>
 
         <Label Content="Document Indentification Proproperties" Margin="52,10,51.2,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="14" HorizontalAlignment="Center" Height="29" Width="268">
             <Label.Foreground>
@@ -76,21 +102,21 @@
             </Label.Background>
         </Label>
 
-        <Label x:Name="lblorbDocIssue" Content="Issue:" HorizontalAlignment="Left" Margin="23,25.2,0,0" VerticalAlignment="Top" Height="26" Grid.Row="6" Width="37" Panel.ZIndex="1">
+        <Label x:Name="lblorbDocIssue" Content="Issue:" HorizontalAlignment="Left" Margin="23,25.2,0,0" VerticalAlignment="Top" Height="26" Grid.Row="9" Width="37" Panel.ZIndex="1">
             <Label.Foreground>
                 <SolidColorBrush Color="{DynamicResource NavyBlue}"/>
             </Label.Foreground>
         </Label>
-        <TextBlock x:Name="txtOrbDocIssue" HorizontalAlignment="Left" Margin="60,29.2,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontWeight="Bold" Width="58" Height="16" Grid.Row="6" Panel.ZIndex="1"/>
+        <TextBlock x:Name="txtOrbDocIssue" HorizontalAlignment="Left" Margin="60,29.2,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontWeight="Bold" Width="58" Height="16" Grid.Row="9" Panel.ZIndex="1"/>
 
-        <DatePicker x:Name="dateOrbDocIssueDate" Margin="0,25.2,23.2,0" VerticalAlignment="Top" Text="dd/MM/yyyy" HorizontalAlignment="Right" Width="115" Height="23" Grid.Row="6" Grid.Column="1" Panel.ZIndex="1"/>
-        <Label x:Name="lblOrbDocIssueDate" Content="Issue Date:" HorizontalAlignment="Left" Margin="45.2,25.2,0,0" VerticalAlignment="Top" Height="26" Grid.Row="6" Width="67" Grid.Column="1" Panel.ZIndex="1">
+        <DatePicker x:Name="dateOrbDocIssueDate" Margin="0,25.2,23.2,0" VerticalAlignment="Top" Text="dd/MM/yyyy" HorizontalAlignment="Right" Width="115" Height="23" Grid.Row="9" Grid.Column="1" Panel.ZIndex="1"/>
+        <Label x:Name="lblOrbDocIssueDate" Content="Issue Date:" HorizontalAlignment="Left" Margin="45.2,25.2,0,0" VerticalAlignment="Top" Height="26" Grid.Row="9" Width="67" Grid.Column="1" Panel.ZIndex="1">
             <Label.Foreground>
                 <SolidColorBrush Color="{DynamicResource NavyBlue}"/>
             </Label.Foreground>
         </Label>
 
-        <Rectangle Fill="White" HorizontalAlignment="Left" Height="50" Margin="10,10.4,0,0" Grid.Row="6" VerticalAlignment="Top" Width="351" Grid.ColumnSpan="2" RadiusX="3" RadiusY="3">
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="50" Margin="10,10.4,0,0" Grid.Row="9" VerticalAlignment="Top" Width="351" Grid.ColumnSpan="2" RadiusX="3" RadiusY="3">
             <Rectangle.Stroke>
                 <SolidColorBrush Color="{DynamicResource NavyBlue}"/>
             </Rectangle.Stroke>

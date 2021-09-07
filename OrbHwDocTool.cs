@@ -63,11 +63,20 @@ namespace OrbProjectDoc
             if (!OrbHwDocTool.CustomPropertyExist("orbDocShortTittle"))
                 OrbHwDocTool.NewDocCustomProperty("orbDocShortTittle", Office.MsoDocProperties.msoPropertyTypeString, "Document Short Tittle");
 
-            if (!OrbHwDocTool.CustomPropertyExist("orbDocClass"))
-                OrbHwDocTool.NewDocCustomProperty("orbDocClass", Office.MsoDocProperties.msoPropertyTypeString, "Class");
+            if (!OrbHwDocTool.CustomPropertyExist("orbDocContract"))
+                OrbHwDocTool.NewDocCustomProperty("orbDocContract", Office.MsoDocProperties.msoPropertyTypeString, "Contract");
 
-            if (!OrbHwDocTool.CustomPropertyExist("orbDocSubclass"))
-                OrbHwDocTool.NewDocCustomProperty("orbDocSubclass", Office.MsoDocProperties.msoPropertyTypeString, "Subclass");
+            if (!OrbHwDocTool.CustomPropertyExist("orbDocContractTittle"))
+                OrbHwDocTool.NewDocCustomProperty("orbDocContractTittle", Office.MsoDocProperties.msoPropertyTypeString, "Contract tittle");
+
+            if (!OrbHwDocTool.CustomPropertyExist("orbDocProgram"))
+                OrbHwDocTool.NewDocCustomProperty("orbDocProgram", Office.MsoDocProperties.msoPropertyTypeString, "Program");
+
+            if (!OrbHwDocTool.CustomPropertyExist("orbDocProject"))
+                OrbHwDocTool.NewDocCustomProperty("orbDocProject", Office.MsoDocProperties.msoPropertyTypeString, "Project");
+
+            if (!OrbHwDocTool.CustomPropertyExist("orbDocDrlNum"))
+                OrbHwDocTool.NewDocCustomProperty("orbDocDrlNum", Office.MsoDocProperties.msoPropertyTypeNumber, "DRL Doc. Num.");
 
             #endregion
 
