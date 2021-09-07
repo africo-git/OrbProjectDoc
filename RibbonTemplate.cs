@@ -27,6 +27,9 @@ namespace OrbProjectDoc
                 // Mostramos el control desesado del ActionsPane (cargado al inicio del documento)
                 Globals.ThisDocument.ActionsPane.Controls[myDocIdProp_Uc_index].Visible = true;
 
+                // Actualizamos los campos del ActionsPane mostrado
+                Globals.ThisDocument.myDocIdProp_Uc.UpdateFrom();
+
                 // Mostramos el Document Actions Task Pane
                 Globals.ThisDocument.Application.TaskPanes[Word.WdTaskPanes.wdTaskPaneDocumentActions].Visible = true;
 

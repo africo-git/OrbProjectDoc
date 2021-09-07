@@ -76,7 +76,7 @@ namespace OrbProjectDoc
                 OrbHwDocTool.NewDocCustomProperty("orbDocProject", Office.MsoDocProperties.msoPropertyTypeString, "Project");
 
             if (!OrbHwDocTool.CustomPropertyExist("orbDocDrlNum"))
-                OrbHwDocTool.NewDocCustomProperty("orbDocDrlNum", Office.MsoDocProperties.msoPropertyTypeNumber, "DRL Doc. Num.");
+                OrbHwDocTool.NewDocCustomProperty("orbDocDrlNum", Office.MsoDocProperties.msoPropertyTypeNumber, 0);
 
             #endregion
 
@@ -125,42 +125,42 @@ namespace OrbProjectDoc
         }
 
         public static void NewDocCustomProperty(string prop, Office.MsoDocProperties type, object content)
-{
-Office.DocumentProperties toolDocCustomProps =
-    Globals.ThisDocument.CustomDocumentProperties as Office.DocumentProperties;
+        {
+            Office.DocumentProperties toolDocCustomProps =
+                Globals.ThisDocument.CustomDocumentProperties as Office.DocumentProperties;
 
-if (!CustomPropertyExist(prop))
-    toolDocCustomProps.Add(prop, false, type, content);
-}
+            if (!CustomPropertyExist(prop))
+                toolDocCustomProps.Add(prop, false, type, content);
+        }
 
         public static Boolean CustomPropertyExist(string propName)
-{
-Office.DocumentProperties toolDocCustomProps =
-    Globals.ThisDocument.CustomDocumentProperties as Office.DocumentProperties;
+        {
+            Office.DocumentProperties toolDocCustomProps =
+                Globals.ThisDocument.CustomDocumentProperties as Office.DocumentProperties;
 
-try
-{
-    Office.DocumentProperty temp = toolDocCustomProps[propName];
-    return true;
-}
-catch
-{
-    return false;
-}
-}
+            try
+            {
+                Office.DocumentProperty temp = toolDocCustomProps[propName];
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         public static void UpdateAllDocFields()
-{
-foreach (Word.Range range in Globals.ThisDocument.StoryRanges)
-{
-    Word.Range r = range;
+        {
+            foreach (Word.Range range in Globals.ThisDocument.StoryRanges)
+            {
+                Word.Range r = range;
 
-    while (r != null)
-    {
-        r.Fields.Update();
-        r = r.NextStoryRange;       // return null at the end.
-    }
-}
-}
+                while (r != null)
+                {
+                    r.Fields.Update();
+                    r = r.NextStoryRange;       // return null at the end.
+                }
+            }
+        }
     }
 }

@@ -21,6 +21,11 @@ namespace OrbProjectDoc
             // Es necesario llamar a este procedimiento es esta parte del documento
             // para que funcione bien el "document actionon pane".
             OrbHwDocTool.DocActionTaskPaneIni();
+
+            // Comprobamos que el documento tiene todas las propiedades necesarias.
+            // Si no las tiene las creamos.
+            OrbHwDocTool.RestoreFundamentalProp();
+            OrbHwDocTool.UpdateAllDocFields();
         }
 
         private void ThisDocument_Shutdown(object sender, System.EventArgs e)

@@ -27,7 +27,12 @@ namespace OrbProjectDoc
 
         private void CmdUpdateFormFields_Click(object sender, RoutedEventArgs e)
         {
+            Globals.ThisDocument.myDocIdProp_Uc.UpdateFrom();
+        }
 
+        private void CmdSaveCustomDocProperties_Click(object sender, RoutedEventArgs e)
+        {
+            Globals.ThisDocument.myDocIdProp_Uc.SaveChange();
         }
     }
 }
